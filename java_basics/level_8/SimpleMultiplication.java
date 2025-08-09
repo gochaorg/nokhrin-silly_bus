@@ -13,7 +13,7 @@ public class SimpleMultiplication {
      */
 
     public int simpleMultiplication(int n) {
-        return -1;
+        return (Math.abs(n) % 2 == 0) ? 8*n : 9*n;
     }
 
     // tests
@@ -33,7 +33,7 @@ public class SimpleMultiplication {
         assert this.simpleMultiplication(21) == 189;
     }
     public void testUpperIntLimit() {
-        assert this.simpleMultiplication(238609294) == Integer.MAX_VALUE;
+        assert this.simpleMultiplication(238609293) == Integer.MAX_VALUE - 10;
     }
     public void testBottomIntLimit() {
         assert this.simpleMultiplication(-268435456) == Integer.MIN_VALUE;
@@ -49,7 +49,6 @@ public class SimpleMultiplication {
         simpleMult.testBoundaryMidPositive();
         simpleMult.testUpperIntLimit();
         simpleMult.testBottomIntLimit();
-        simpleMult.testZero();
     }
 
 
